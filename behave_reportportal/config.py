@@ -20,6 +20,7 @@ class Config(object):
         launch_description=None,
         launch_attributes=None,
         step_based=None,
+        nested_steps=None,
         is_skipped_an_issue=None,
         retries=None,
         rerun=None,
@@ -38,6 +39,7 @@ class Config(object):
             " "
         )
         self.step_based = get_bool(step_based) or False
+        self.nested_steps = get_bool(nested_steps) or False
         self.is_skipped_an_issue = get_bool(is_skipped_an_issue) or False
         self.retries = retries and int(retries)
         self.rerun = get_bool(rerun) or False
